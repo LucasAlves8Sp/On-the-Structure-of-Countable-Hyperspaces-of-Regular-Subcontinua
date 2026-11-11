@@ -1,0 +1,14 @@
+# Negative control. Solution.lean was temporarily altered: the conclusion of
+# countable_hypothesis_satisfiable was weakened to "(regular X).Countable ∨ True".
+# Comparator is expected to reject. The file was restored afterwards.
+$ lake comparator --config <same> --inadvisably-no-sandbox
+WARNING: Sandbox disabled, this run is not trustworthy.
+Resolving dependencies
+Building Challenge
+Build completed successfully (1722 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, RegularSubcontinua.isRegSubcontinuum_iff_exists_mem_regular, RegularSubcontinua.card_eq_continuum_of_independent, RegularSubcontinua.card_eq_continuum_of_blisters, RegularSubcontinua.complement_lemma, RegularSubcontinua.isFiniteUnion_operations, RegularSubcontinua.components_of_isFiniteUnion, RegularSubcontinua.absorption, RegularSubcontinua.minimal_disjoint_interior, RegularSubcontinua.decreasing_intersection, RegularSubcontinua.dense_interior_minimal, RegularSubcontinua.atomicFamily_basic, RegularSubcontinua.atomicFamily_coding, RegularSubconti
+Building Solution
+Build completed successfully (1870 jobs).
+error: Challenge and solution theorem statement do not match: 'RegularSubcontinua.countable_hypothesis_satisfiable'
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, RegularSubcontinua.isRegSubcontinuum_iff_exists_mem_regular, RegularSubcontinua.card_eq_continuum_of_independent, RegularSubcontinua.card_eq_continuum_of_blisters, RegularSubcontinua.complement_lemma, RegularSubcontinua.isFiniteUnion_operations, RegularSubcontinua.components_of_isFiniteUnion, RegularSubcontinua.absorption, RegularSubcontinua.minimal_disjoint_interior, RegularSubcontinua.decreasing_intersection, RegularSubcontinua.dense_interior_minimal, RegularSubcontinua.atomicFamily_basic, RegularSubcontinua.atomicFamily_coding, RegularSubconti
+exit status: 1

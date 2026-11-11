@@ -1,0 +1,36 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "RegularSubcontinua.isRegSubcontinuum_iff_exists_mem_regular",
+    "RegularSubcontinua.card_eq_continuum_of_independent",
+    "RegularSubcontinua.card_eq_continuum_of_blisters",
+    "RegularSubcontinua.complement_lemma",
+    "RegularSubcontinua.isFiniteUnion_operations",
+    "RegularSubcontinua.components_of_isFiniteUnion",
+    "RegularSubcontinua.absorption",
+    "RegularSubcontinua.minimal_disjoint_interior",
+    "RegularSubcontinua.decreasing_intersection",
+    "RegularSubcontinua.dense_interior_minimal",
+    "RegularSubcontinua.atomicFamily_basic",
+    "RegularSubcontinua.atomicFamily_coding",
+    "RegularSubcontinua.atomicFamily_open_of_mem",
+    "RegularSubcontinua.atomicFamily_discrete",
+    "RegularSubcontinua.isGdelta_regular_of_isDAtomic",
+    "RegularSubcontinua.structure_theorem",
+    "RegularSubcontinua.main_theorem",
+    "RegularSubcontinua.not_homeomorphic_rat",
+    "RegularSubcontinua.no_continuum_with_regular_hyperspace_rat",
+    "RegularSubcontinua.dichotomy",
+    "RegularSubcontinua.no_rational_chain",
+    "RegularSubcontinua.dichotomy_exclusive",
+    "RegularSubcontinua.countable_hypothesis_satisfiable"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

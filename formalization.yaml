@@ -1,0 +1,269 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml v0.4.
+#
+# The three values marked "CONFIRM" in the comments below were filled in on the
+# author's behalf and must be confirmed by him before any submission.
+version: "v0.4"
+
+project:
+  name: "On the structure of countable hyperspaces of regular subcontinua"
+  description: >-
+    For a metric continuum X, D(X) is the hyperspace of subcontinua of X that
+    are the closure of their interior, with the Hausdorff metric. The project
+    formalizes the theorem that a countable D(X) is a G-delta subset of the
+    hyperspace of subcontinua, hence completely metrizable and scattered with
+    dense isolated points, so that D(X) is never homeomorphic to the
+    rationals; together with the structure theory behind it (independent
+    families, blister theorem, complement lemma, absorption by minimal
+    elements, decreasing intersections, density of minimal elements, D-atomic
+    continua, the cardinality dichotomy).
+  authors:
+    # CONFIRM. The Lean code was written by an AI system (see automation).
+    - "Lucas Alves de Almeida"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    # CONFIRM.
+    - "Lucas Alves de Almeida"
+
+classification:
+  arxiv: ["math.GN"]
+  msc2020: ["54F16", "54B20", "54F15", "54H05"]
+
+sources:
+  - title: "On the structure of countable hyperspaces of regular subcontinua"
+    authors:
+      - "Lucas Alves de Almeida"
+    id: "paper/problemQ.pdf in this repository (20 pages, version of 2026-11-11)"
+    type: "unpublished manuscript"
+    relationship: "formalizes"
+    note: >-
+      Not peer reviewed and not posted anywhere else at the time of writing.
+      Developed with extensive AI assistance (Opus 5.5, Fable 5.2 and
+      ChatGPT-Astra), as declared in the manuscript. The Lean proofs establish the statements of
+      the manuscript but do not follow every written proof step by step; see
+      docs/BLUEPRINT.md, Section 2.
+    license: "unknown"
+    # CONFIRM.
+    author_endorsement: "participated"
+  - title: "On the hyperspaces of meager and regular continua"
+    authors:
+      - "Javier Camargo"
+      - "Norberto Ordoñez"
+      - "Diego Ramírez"
+    id: "doi:10.4995/agt.2024.20116"
+    type: "article"
+    location: "Applied General Topology 25 (2024), no. 2, 385-406"
+    relationship: "background"
+    note: "Source of the question (Question 3.26). Nothing from it is used."
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "Los hiperespacios de subcontinuos regulares y subcontinuos magros"
+    authors:
+      - "Diego Alexánder Ramírez Angarita"
+    id: "https://noesis.uis.edu.co/entities/publication/cd4f0fe6-ec75-47d8-8e0a-617149375321"
+    type: "undergraduate thesis, Universidad Industrial de Santander, 2023"
+    relationship: "background"
+    note: >-
+      Original statement of the question (Pregunta 3.2.14). Its Teorema 2.0.2
+      (D(X) is Borel) is cited by the manuscript for Corollary 6.5; the
+      formalization proves that fact itself (measurableSet_regular).
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "The hyperspace of regular subcontinua"
+    authors:
+      - "Norberto Ordoñez"
+    id: "doi:10.1016/j.topol.2017.11.038"
+    type: "article"
+    location: "Topology and its Applications 234 (2018), 415-427"
+    relationship: "background"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Formalized: every numbered lemma, proposition, theorem and corollary of
+    Sections 1 and 3 to 6 of the manuscript, and Proposition 7.5; that is,
+    Theorems 1.2, 1.4, 1.5, 3.4, 4.4, 5.1, Lemmas 3.2, 4.1, 4.6, 6.2,
+    Propositions 4.3, 6.3, 7.5, Corollaries 4.5, 6.5, with the hypotheses of
+    the manuscript and no additional one. NOT formalized: Examples 7.1, 7.2
+    and 7.3 (7.3 is a new example of the manuscript), all remarks, and the
+    preliminary Lemmas 2.3 and 2.4 as stated (the Lean proofs do not use
+    boundary bumping and treat components differently). The manuscript as a
+    whole is therefore only partially formalized. See docs/CORRESPONDENCE.md.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude Fable 5.2"]
+      framework: "Claude (Anthropic) agent session with a shell"
+      tool_setup: >-
+        All Lean code was written by the model. The proof modules were first
+        written without compiler feedback, with Mathlib names checked by text
+        search of the Mathlib source at tag v4.35.0-rc2, and then compiled and
+        repaired with lake build. Mathlib was built from source because the
+        Mathlib cache server was not reachable.
+      cost:
+        wall_time: "about three hours on 2026-11-11, of which about one hour building Mathlib"
+        spend_usd: "not tracked"
+        hardware: "cloud container"
+      prompting_notes: >-
+        The human author supplied a master prompt requiring the manuscript's
+        exact hypotheses, no sorry or extra axioms, standalone Comparator
+        targets for Lemma 4.6 and Theorem 5.1, and an explicit report of
+        anything left unformalized.
+  spend_usd: "not tracked"
+  notes: >-
+    According to the author's declaration in the manuscript, the models
+    involved in obtaining the mathematical results were Opus 5.5, Fable 5.2
+    and ChatGPT-Astra: Fable 5.2 carried out the main research, ChatGPT-Astra
+    rechecked the arguments, compared them with the literature and re-derived
+    the results, and the author directed the investigation and edited and
+    checked the text. The prompt that started the research is in
+    docs/research-prompt.md. The
+    Lean statements and proofs were produced by Fable 5.2 in one agent
+    session. The human author has not written or reviewed Lean code.
+
+fidelity:
+  divergences: >-
+    (1) Regular subcontinua are handled as subsets of X satisfying a
+    predicate; isRegSubcontinuum_iff_exists_mem_regular ties the predicate to
+    the hyperspace. (2) C(X) is a subtype of Mathlib's NonemptyCompacts X with
+    the Vietoris topology, which Mathlib identifies by construction with the
+    topology of the Hausdorff metric. (3) Components are
+    connectedComponentIn. (4) Proposition 4.3 (2) keeps the countability
+    hypothesis of the source although the proof does not need it, and drops
+    the hypothesis that F is nonempty. (5) Corollary 6.5 ("exactly one") is
+    split into dichotomy and dichotomy_exclusive. (6) Proposition 7.5 is
+    stated with a strictly monotone map from the rationals. (7) Cardinality
+    statements are about the type of points of regular X. No other divergence
+    is known.
+
+review:
+  status: "self-assessed by the AI system that wrote the code; no human review"
+  reviewers:
+    - "none"
+  notes: >-
+    The manuscript's proofs were re-derived by an AI system before the
+    statements were written (docs/AUDIT.md), and the compiled statements were
+    read back against the manuscript by the same system. No human referee has
+    examined the manuscript and no human has audited the Lean statements.
+    lake comparator accepted the solution locally with the Lean kernel, nanoda
+    and con-ron, but the run was made with --inadvisably-no-sandbox because
+    bubblewrap was not installed; scripts/verify-comparator.sh has not been
+    run as shipped, and the build has not been repeated on a fresh checkout.
+
+alignment:
+  namespace: "RegularSubcontinua"
+  statements:
+    - source: "Theorem 1.2 (Main Theorem), first part"
+      lean: "RegularSubcontinua.main_theorem"
+      module: "Solution"
+      status: "proved"
+      note: "D(X) countable implies: G-delta in C(X), completely metrizable, scattered, isolated points dense."
+    - source: "Theorem 1.2, last assertion"
+      lean: "RegularSubcontinua.not_homeomorphic_rat"
+      module: "Solution"
+      status: "proved"
+      note: "For every metric continuum X there is no homeomorphism between D(X) and the rationals."
+    - source: "Theorem 1.2, last assertion, continuum quantified"
+      lean: "RegularSubcontinua.no_continuum_with_regular_hyperspace_rat"
+      module: "Solution"
+      status: "proved"
+      note: "Same assertion with X bound by an existential quantifier."
+    - source: "Theorem 1.4 (Structure Theorem)"
+      lean: "RegularSubcontinua.structure_theorem"
+      module: "Solution"
+      status: "proved"
+      note: "Parts (1) to (4)."
+    - source: "Theorem 1.5"
+      lean: "RegularSubcontinua.isGdelta_regular_of_isDAtomic"
+      module: "Solution"
+      status: "proved"
+      note: "D-atomic implies D(X) is G-delta in C(X)."
+    - source: "Lemma 3.2 (independent families)"
+      lean: "RegularSubcontinua.card_eq_continuum_of_independent"
+      module: "Solution"
+      status: "proved"
+    - source: "Theorem 3.4 (blister theorem)"
+      lean: "RegularSubcontinua.card_eq_continuum_of_blisters"
+      module: "Solution"
+      status: "proved"
+    - source: "Lemma 4.1 (complement lemma)"
+      lean: "RegularSubcontinua.complement_lemma"
+      module: "Solution"
+      status: "proved"
+      note: "Parts (1) to (3) as one conjunction, with R = regDiff B A."
+    - source: "Proposition 4.3 (1)"
+      lean: "RegularSubcontinua.isFiniteUnion_operations"
+      module: "Solution"
+      status: "proved"
+    - source: "Proposition 4.3 (2)"
+      lean: "RegularSubcontinua.components_of_isFiniteUnion"
+      module: "Solution"
+      status: "proved"
+      note: "The countability hypothesis is kept to match the source; the proof does not use it."
+    - source: "Theorem 4.4 (absorption)"
+      lean: "RegularSubcontinua.absorption"
+      module: "Solution"
+      status: "proved"
+    - source: "Corollary 4.5"
+      lean: "RegularSubcontinua.minimal_disjoint_interior"
+      module: "Solution"
+      status: "proved"
+    - source: "Lemma 4.6 (decreasing intersections)"
+      lean: "RegularSubcontinua.decreasing_intersection"
+      module: "Solution"
+      status: "proved"
+      note: "Standalone Comparator target."
+    - source: "Theorem 5.1 (density)"
+      lean: "RegularSubcontinua.dense_interior_minimal"
+      module: "Solution"
+      status: "proved"
+      note: "Standalone Comparator target."
+    - source: "Lemma 6.2"
+      lean: "RegularSubcontinua.atomicFamily_basic"
+      module: "Solution"
+      status: "proved"
+      note: "Parts (a), (b), (c)."
+    - source: "Proposition 6.3 (a)"
+      lean: "RegularSubcontinua.atomicFamily_coding"
+      module: "Solution"
+      status: "proved"
+    - source: "Proposition 6.3 (b), first part"
+      lean: "RegularSubcontinua.atomicFamily_open_of_mem"
+      module: "Solution"
+      status: "proved"
+    - source: "Proposition 6.3 (b), second part"
+      lean: "RegularSubcontinua.atomicFamily_discrete"
+      module: "Solution"
+      status: "proved"
+    - source: "Corollary 6.5 (dichotomy), at least one alternative"
+      lean: "RegularSubcontinua.dichotomy"
+      module: "Solution"
+      status: "proved"
+    - source: "Corollary 6.5 (dichotomy), at most one alternative"
+      lean: "RegularSubcontinua.dichotomy_exclusive"
+      module: "Solution"
+      status: "proved"
+    - source: "Proposition 7.5"
+      lean: "RegularSubcontinua.no_rational_chain"
+      module: "Solution"
+      status: "proved"
+      note: "Stated as: no strictly monotone map from the rationals to the regular subcontinua."
+    - source: "Not in the source: bridge between subsets of X and points of D(X)"
+      lean: "RegularSubcontinua.isRegSubcontinuum_iff_exists_mem_regular"
+      module: "Solution"
+      status: "proved"
+      note: "Auxiliary."
+    - source: "Not in the source: the countability hypothesis is satisfiable"
+      lean: "RegularSubcontinua.countable_hypothesis_satisfiable"
+      module: "Solution"
+      status: "proved"
+      note: "Auxiliary sanity statement (one-point space)."
+
+acknowledgements: "Mathlib; the Palomar starter template (PalomarRegistry/PalomarTemplate), from which the scripts, CI and layout are taken."

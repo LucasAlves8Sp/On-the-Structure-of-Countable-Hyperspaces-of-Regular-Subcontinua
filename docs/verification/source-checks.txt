@@ -1,0 +1,20 @@
+$ python3 scripts/check-lean-sources.py
+exit status: 0
+
+$ ruby scripts/validate-formalization.rb
+formalization.yaml contains no TEMPLATE values
+exit status: 0
+
+$ wc -l Challenge.lean Solution.lean RegularSubcontinua/*.lean
+   293 Challenge.lean
+   200 Solution.lean
+   297 RegularSubcontinua/Atomic.lean
+   404 RegularSubcontinua/Basic.lean
+   440 RegularSubcontinua/Complement.lean
+   377 RegularSubcontinua/Counting.lean
+   222 RegularSubcontinua/Decreasing.lean
+    97 RegularSubcontinua/Defs.lean
+   526 RegularSubcontinua/Density.lean
+   119 RegularSubcontinua/Dichotomy.lean
+   298 RegularSubcontinua/Main.lean
+  3273 total
