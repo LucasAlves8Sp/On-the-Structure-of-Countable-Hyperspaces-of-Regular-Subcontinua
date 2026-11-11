@@ -3,6 +3,8 @@
 Paper by Lucas Alves de Almeida (20-page version of 11 November 2026, in
 `paper/`) and its Lean 4 formalization.
 
+**Preprint:** [aiXiv:2611.01165](https://aixiv.online/abs/2611.01165) [math.GN].
+
 For a metric continuum `X`, `D(X)` is the hyperspace of subcontinua `A` of `X`
 with `A = cl int A`. The main theorem: if `D(X)` is countable, it is a `G_δ`
 subset of `C(X)`, hence completely metrizable and scattered with dense isolated

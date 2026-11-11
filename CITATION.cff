@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper."
+title: "On the structure of countable hyperspaces of regular subcontinua"
+authors:
+  - family-names: "Alves de Almeida"
+    given-names: "Lucas"
+    affiliation: "Independent Researcher"
+license: Apache-2.0
+repository-code: "https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua"
+date-released: 2026-11-11
+preferred-citation:
+  type: article
+  title: "On the structure of countable hyperspaces of regular subcontinua"
+  authors:
+    - family-names: "Alves de Almeida"
+      given-names: "Lucas"
+  year: 2026
+  url: "https://aixiv.online/abs/2611.01165"
+  notes: "Preprint, aiXiv:2611.01165 [math.GN]"
