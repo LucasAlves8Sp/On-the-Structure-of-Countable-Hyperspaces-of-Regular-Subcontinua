@@ -1,8 +1,5 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
 # formalization.yaml v0.4.
-#
-# The three values marked "CONFIRM" in the comments below were filled in on the
-# author's behalf and must be confirmed by him before any submission.
 version: "v0.4"
 
 project:
@@ -18,11 +15,9 @@ project:
     elements, decreasing intersections, density of minimal elements, D-atomic
     continua, the cardinality dichotomy).
   authors:
-    # CONFIRM. The Lean code was written by an AI system (see automation).
     - "Lucas Alves de Almeida"
   license: "Apache-2.0"
   responsible_maintainers:
-    # CONFIRM.
     - "Lucas Alves de Almeida"
 
 classification:
@@ -43,7 +38,6 @@ sources:
       the manuscript but do not follow every written proof step by step; see
       docs/BLUEPRINT.md, Section 2.
     license: "unknown"
-    # CONFIRM.
     author_endorsement: "participated"
   - title: "On the hyperspaces of meager and regular continua"
     authors:

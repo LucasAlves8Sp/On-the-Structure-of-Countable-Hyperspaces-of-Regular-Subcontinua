@@ -30,7 +30,7 @@ examples and remarks are not covered.**
 | CI on commit `49a57d8` | Metadata and licence, submission link, build, Comparator: pass. **API documentation job: failed** with "not enough memory" on the runner while doc-gen4 was processing dependencies; it does not involve the proofs. See the Actions tab for later commits. |
 | Human review of the Lean statements | **None.** |
 | Human refereeing of the paper | **None.** |
-| Palomar Registry | **Not submitted, not registered.** |
+| Palomar Registry | Submitted by the author on 11 November 2026; not registered at the time of writing. |
 
 The logs of the local commands are in `docs/verification/`; the CI logs are in
 the Actions tab.
@@ -64,7 +64,7 @@ route in places.
 - `comparator.json`: the 23 theorem names. `definition_names` is empty on
   purpose: the definitions are not holes to be filled by the solution, so
   Comparator requires them to be identical in `Challenge` and `Solution`.
-- `formalization.yaml`: metadata (v0.4). Three values are marked `CONFIRM`.
+- `formalization.yaml`: metadata (v0.4).
 - `docs/AUDIT.md`: mathematical audit before the formalization, and what the
   formalization found.
 - `docs/CORRESPONDENCE.md`: paper result ↔ Lean declaration; what is not
@@ -94,7 +94,7 @@ ruby scripts/validate-formalization.rb
 ```
 
 Before any submission, check that CI is green on the exact commit to be
-submitted, and confirm the three `CONFIRM` values in `formalization.yaml`. Submission goes through
+submitted. Submission goes through
 <https://submit.palomar-registry.org/> with the full 40-character commit SHA,
 by the responsible maintainer.
 
