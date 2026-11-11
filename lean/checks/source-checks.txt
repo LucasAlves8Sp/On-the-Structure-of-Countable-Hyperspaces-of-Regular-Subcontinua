@@ -5,9 +5,10 @@ $ ruby scripts/validate-formalization.rb
 formalization.yaml contains no TEMPLATE values
 exit status: 0
 
-$ wc -l Challenge.lean Solution.lean RegularSubcontinua/*.lean
+$ wc -l Challenge.lean Solution.lean CheckAxioms.lean RegularSubcontinua/*.lean
    293 Challenge.lean
    200 Solution.lean
+    32 CheckAxioms.lean
    297 RegularSubcontinua/Atomic.lean
    404 RegularSubcontinua/Basic.lean
    440 RegularSubcontinua/Complement.lean
@@ -17,4 +18,4 @@ $ wc -l Challenge.lean Solution.lean RegularSubcontinua/*.lean
    526 RegularSubcontinua/Density.lean
    119 RegularSubcontinua/Dichotomy.lean
    298 RegularSubcontinua/Main.lean
-  3273 total
+  3305 total

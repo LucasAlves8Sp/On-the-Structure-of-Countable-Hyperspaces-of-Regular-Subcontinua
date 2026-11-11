@@ -1,0 +1,32 @@
+{
+  "title": "On the structure of countable hyperspaces of regular subcontinua",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>Let <i>X</i> be a metric continuum and let D(<i>X</i>) be its hyperspace of regular subcontinua, that is, of the subcontinua of <i>X</i> which are the closure of their interior. We prove that if D(<i>X</i>) is countable, then the interiors of its minimal elements are dense in <i>X</i>, and every regular subcontinuum is determined by the minimal elements it contains. We further establish that D(<i>X</i>) is a G<sub>δ</sub> subset of the hyperspace C(<i>X</i>) of subcontinua whenever <i>X</i> admits a family of regular subcontinua whose interiors have dense union and which satisfies an absorption property. Consequently, every countable D(<i>X</i>) is completely metrizable and scattered. In particular, D(<i>X</i>) is never homeomorphic to the rational numbers, which answers a question of Ramírez Angarita and of Camargo, Ordoñez and Ramírez. The theorems of the paper are formalized in Lean 4.</p><p><b>Lean formalization.</b> Every numbered theorem, lemma, proposition and corollary of Sections 1 and 3–6, and Proposition 7.5, is proved in Lean 4 (v4.35.0-rc2) with Mathlib, using only Lean's standard axioms; the examples and remarks are not formalized. Lean Comparator accepted the solution in a sandbox (Lean kernel, nanoda, con-ron).</p><p><b>Also available</b> as aiXiv:2611.01165 (https://aixiv.online/abs/2611.01165).</p><p><b>Status.</b> Preprint; no independent expert has yet verified the proofs. Developed with extensive AI assistance (Opus 5.5, Fable 5.2, ChatGPT-Astra); see AI_DISCLOSURE.md. The first prompt is included in prompt/first-prompt.md.</p>",
+  "creators": [
+    {
+      "name": "Alves de Almeida, Lucas",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "keywords": [
+    "continuum",
+    "hyperspace",
+    "regular subcontinuum",
+    "rational numbers",
+    "scattered space",
+    "Lean 4",
+    "formalization"
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "notes": "Not yet independently peer reviewed. Mathematics Subject Classification 2020: Primary 54F16; Secondary 54B20, 54F15, 54H05.",
+  "related_identifiers": [
+    {
+      "identifier": "https://aixiv.online/abs/2611.01165",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    }
+  ]
+}

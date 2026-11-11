@@ -1,31 +1,30 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite the paper."
+message: "If you use this work, please cite it as below."
 title: "On the structure of countable hyperspaces of regular subcontinua"
+type: article
 authors:
   - family-names: "Alves de Almeida"
     given-names: "Lucas"
-    affiliation: "Independent Researcher"
-license: Apache-2.0
-repository-code: "https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua"
-date-released: 2026-11-11
-doi: "10.5281/zenodo.24144777"
+    affiliation: "Independent researcher"
+doi: 10.5281/zenodo.24144776
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.24144777"
-    description: "Zenodo record of the paper (version 1)"
-  - type: doi
-    value: "10.5281/zenodo.24144776"
+    value: 10.5281/zenodo.24144776
     description: "Zenodo concept DOI (all versions)"
+  - type: doi
+    value: 10.5281/zenodo.24144777
+    description: "Zenodo, version 1"
   - type: url
     value: "https://aixiv.online/abs/2611.01165"
-    description: "aiXiv:2611.01165"
-preferred-citation:
-  type: article
-  title: "On the structure of countable hyperspaces of regular subcontinua"
-  authors:
-    - family-names: "Alves de Almeida"
-      given-names: "Lucas"
-  year: 2026
-  doi: "10.5281/zenodo.24144777"
-  url: "https://doi.org/10.5281/zenodo.24144777"
-  notes: "Preprint, aiXiv:2611.01165 [math.GN]"
+    description: "aiXiv preprint aiXiv:2611.01165"
+version: v1
+date-released: 2026-11-11
+license: CC-BY-4.0
+repository-code: "https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua"
+keywords:
+  - continuum
+  - hyperspace
+  - regular subcontinuum
+  - rational numbers
+  - scattered space
+  - Lean 4

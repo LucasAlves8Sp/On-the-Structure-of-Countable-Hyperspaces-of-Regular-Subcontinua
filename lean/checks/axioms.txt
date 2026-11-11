@@ -1,4 +1,4 @@
-$ lake env lean axioms.lean   # one "#print axioms" per compared theorem
+$ lake env lean CheckAxioms.lean
 'RegularSubcontinua.isRegSubcontinuum_iff_exists_mem_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
 'RegularSubcontinua.card_eq_continuum_of_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
 'RegularSubcontinua.card_eq_continuum_of_blisters' depends on axioms: [propext, Classical.choice, Quot.sound]

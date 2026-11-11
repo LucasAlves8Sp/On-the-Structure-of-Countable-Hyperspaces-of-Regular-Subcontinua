@@ -28,15 +28,16 @@ sources:
   - title: "On the structure of countable hyperspaces of regular subcontinua"
     authors:
       - "Lucas Alves de Almeida"
-    id: "paper/problemQ.pdf in this repository (20 pages, version of 2026-11-11)"
-    type: "unpublished manuscript"
+    id: "doi:10.5281/zenodo.24144776"
+    location: "https://doi.org/10.5281/zenodo.24144776; also aiXiv:2611.01165; paper/ in the repository"
+    type: "preprint"
     relationship: "formalizes"
     note: >-
-      Not peer reviewed and not posted anywhere else at the time of writing.
+      Preprint, not peer reviewed; Zenodo doi:10.5281/zenodo.24144776, aiXiv:2611.01165.
       Developed with extensive AI assistance (Opus 5.5, Fable 5.2 and
       ChatGPT-Astra), as declared in the manuscript. The Lean proofs establish the statements of
       the manuscript but do not follow every written proof step by step; see
-      docs/BLUEPRINT.md, Section 2.
+      REVIEW_AND_VERIFICATION.md, Section 3.2, in the repository.
     license: "unknown"
     author_endorsement: "participated"
   - title: "On the hyperspaces of meager and regular continua"
@@ -85,7 +86,7 @@ status:
     and 7.3 (7.3 is a new example of the manuscript), all remarks, and the
     preliminary Lemmas 2.3 and 2.4 as stated (the Lean proofs do not use
     boundary bumping and treat components differently). The manuscript as a
-    whole is therefore only partially formalized. See docs/CORRESPONDENCE.md.
+    whole is therefore only partially formalized. See REVIEW_AND_VERIFICATION.md, Section 2, in the repository.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: []
@@ -118,7 +119,7 @@ automation:
     rechecked the arguments, compared them with the literature and re-derived
     the results, and the author directed the investigation and edited and
     checked the text. The prompt that started the research is in
-    docs/research-prompt.md. The
+    prompt/first-prompt.md in the repository. The
     Lean statements and proofs were produced by Fable 5.2 in one agent
     session. The human author has not written or reviewed Lean code.
 
@@ -143,7 +144,7 @@ review:
     - "none"
   notes: >-
     The manuscript's proofs were re-derived by an AI system before the
-    statements were written (docs/AUDIT.md), and the compiled statements were
+    statements were written (REVIEW_AND_VERIFICATION.md, Section 5), and the compiled statements were
     read back against the manuscript by the same system. No human referee has
     examined the manuscript and no human has audited the Lean statements.
     scripts/verify-comparator.sh, as shipped and sandboxed, accepted the

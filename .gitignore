@@ -1,4 +1,12 @@
-/.cache/
-/.lake/
-/docbuild/.lake/
+# Lean build output
+lean/.lake/
+lean/.cache/
 
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz

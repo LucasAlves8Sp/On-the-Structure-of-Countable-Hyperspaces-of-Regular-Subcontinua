@@ -1,5 +1,5 @@
-$ lake build
-⚠ [1723/1873] Replayed RegularSubcontinua.Counting
+$ lake build   (in lean/)
+⚠ [1722/1798] Replayed RegularSubcontinua.Counting
 warning: RegularSubcontinua/Counting.lean:102:0: automatically included section variable(s) unused in theorem `RegularSubcontinua.coe_toRegular`:
   [CompactSpace X]
   [ConnectedSpace X]
@@ -41,7 +41,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [CompactSpace X] [ConnectedSpace X] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1724/1873] Replayed RegularSubcontinua.Complement
+⚠ [1723/1798] Replayed RegularSubcontinua.Complement
 warning: RegularSubcontinua/Complement.lean:62:56: Variable name `hG` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
@@ -54,7 +54,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [ConnectedSpace X] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1727/1873] Replayed RegularSubcontinua.Density
+⚠ [1726/1798] Replayed RegularSubcontinua.Density
 warning: RegularSubcontinua/Density.lean:168:0: automatically included section variable(s) unused in theorem `RegularSubcontinua.IsLevel.unique`:
   [CompactSpace X]
   [ConnectedSpace X]
@@ -76,7 +76,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [CompactSpace X] [ConnectedSpace X] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1731/1873] Replayed RegularSubcontinua.Atomic
+⚠ [1730/1798] Replayed RegularSubcontinua.Atomic
 warning: RegularSubcontinua/Atomic.lean:28:0: automatically included section variable(s) unused in theorem `RegularSubcontinua.IsAtomicFamily.reg`:
   [CompactSpace X]
   [ConnectedSpace X]
@@ -112,7 +112,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [CompactSpace X] [ConnectedSpace X] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1764/1873] Replayed RegularSubcontinua.Main
+⚠ [1763/1798] Replayed RegularSubcontinua.Main
 warning: RegularSubcontinua/Main.lean:139:0: automatically included section variable(s) unused in theorem `RegularSubcontinua.isClosed_setOf_isConnected`:
   [CompactSpace X]
   [ConnectedSpace X]
@@ -120,14 +120,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [CompactSpace X] [ConnectedSpace X] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1870/1873] Replayed Solution
-warning: Solution.lean:68:37: Variable name `hcount` is not explicitly referenced.
-
-Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
-  [apply] _hcount
-
-Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [1872/1873] Built Challenge (1.9s)
+⚠ [1870/1873] Replayed Challenge
 warning: Challenge.lean:124:8: declaration uses `sorry`
 warning: Challenge.lean:129:8: declaration uses `sorry`
 warning: Challenge.lean:135:8: declaration uses `sorry`
@@ -151,4 +144,11 @@ warning: Challenge.lean:266:8: declaration uses `sorry`
 warning: Challenge.lean:273:8: declaration uses `sorry`
 warning: Challenge.lean:282:8: declaration uses `sorry`
 warning: Challenge.lean:288:8: declaration uses `sorry`
+⚠ [1872/1873] Replayed Solution
+warning: Solution.lean:68:37: Variable name `hcount` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcount
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
 Build completed successfully (1873 jobs).
