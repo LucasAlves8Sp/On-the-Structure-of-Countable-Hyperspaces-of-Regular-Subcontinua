@@ -17,15 +17,19 @@ to warnings and errors; nothing else was edited.
 
 ## What these logs are not
 
-- **Not a sandboxed Comparator run.** `bubblewrap` was not installed, so every
+- **Not the sandboxed Comparator run.** That one was made by CI: the job
+  "Check statement against solution" ran `scripts/verify-comparator.sh` with
+  `bubblewrap` on commit `49a57d8` and accepted the solution
+  (https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/actions/runs/43079572098).
+  Locally, `bubblewrap` was not installed, so every
   Comparator run used `--inadvisably-no-sandbox`, and Comparator itself prints
-  "this run is not trustworthy" for such runs. `scripts/verify-comparator.sh`
-  was not run as shipped.
+  "this run is not trustworthy" for such runs.
 - **Not a fresh-checkout build.** The build directory was reused across the
   session, and Mathlib was compiled from source because its cache server could
-  not be reached.
-- **Not CI.** These logs were made before the first push. CI results, including
-  the sandboxed Comparator job, are in the Actions tab of the repository.
+  not be reached. CI did build from a fresh checkout, with the Mathlib
+  cache.
+- **Not CI.** These logs were made before the first push. CI results are in the
+  Actions tab of the repository.
 
 `comparator-negative-control.txt` was made before a comment-only change to the
 header of `Challenge.lean` (new title of the paper); all other logs were made

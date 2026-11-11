@@ -152,10 +152,10 @@ review:
     statements were written (docs/AUDIT.md), and the compiled statements were
     read back against the manuscript by the same system. No human referee has
     examined the manuscript and no human has audited the Lean statements.
-    lake comparator accepted the solution locally with the Lean kernel, nanoda
-    and con-ron, but the run was made with --inadvisably-no-sandbox because
-    bubblewrap was not installed; scripts/verify-comparator.sh has not been
-    run as shipped, and the build has not been repeated on a fresh checkout.
+    scripts/verify-comparator.sh, as shipped and sandboxed, accepted the
+    solution in GitHub Actions on commit 49a57d8 (Lean kernel, nanoda,
+    con-ron), on a fresh checkout. Local runs of lake comparator, including
+    --paranoid, also accepted it but were made without the sandbox.
 
 alignment:
   namespace: "RegularSubcontinua"

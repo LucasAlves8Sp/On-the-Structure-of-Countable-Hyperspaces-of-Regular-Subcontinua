@@ -10,8 +10,9 @@ points; so `D(X)` is never homeomorphic to `ℚ`.
 
 ## Status
 
-**All theorems of the paper are proved in Lean. The paper as a whole is only
-partially formalized. The official sandboxed Comparator run has not been made.**
+**All theorems of the paper are proved in Lean and pass the sandboxed
+Comparator job in CI. The paper as a whole is only partially formalized: its
+examples and remarks are not covered.**
 
 | Item | Status |
 | --- | --- |
@@ -21,18 +22,18 @@ partially formalized. The official sandboxed Comparator run has not been made.**
 | Lemmas 2.3 and 2.4 of the preliminaries, as stated | **Not formalized.** The Lean proofs do not use boundary bumping and treat components differently (`docs/BLUEPRINT.md`, Section 2). |
 | `sorry`, `admit`, `native_decide`, new axioms in `Solution.lean` and `RegularSubcontinua/` | None. |
 | Axioms of every compared theorem | `propext`, `Classical.choice`, `Quot.sound` only. |
-| `lake build` | Succeeds. Mathlib was built from source (the Mathlib cache server was not reachable). |
-| `lake comparator`, Lean kernel + nanoda + con-ron | Accepts, **run with `--inadvisably-no-sandbox`** because `bubblewrap` was not installed where this was prepared. |
-| `lake comparator --paranoid` (adds leanchecker-paranoid, lean4lean, con-leche) | Accepts, same caveat. |
+| `lake build` | Succeeds, locally (Mathlib built from source) and in CI on a fresh checkout (Mathlib cache). |
+| `./scripts/verify-comparator.sh` as shipped (sandboxed with `bubblewrap`; Lean kernel + nanoda + con-ron) | **Accepts**, in GitHub Actions on commit `49a57d8` ([run](https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/actions/runs/43079572098)). |
+| `lake comparator`, same kernels, local run | Accepts; run with `--inadvisably-no-sandbox` because `bubblewrap` was not installed where the code was written. |
+| `lake comparator --paranoid` (adds leanchecker-paranoid, lean4lean, con-leche), local run | Accepts; also without the sandbox. |
 | Negative control | With one statement of `Solution.lean` deliberately weakened, Comparator rejected it ("theorem statement do not match"). The file was then restored. |
-| `./scripts/verify-comparator.sh` as shipped (sandboxed) | **Not run.** |
-| Build on a fresh checkout | **Not done.** |
-| CI (includes the sandboxed Comparator job) | No result existed when this file was written. See the Actions tab of the repository for the runs on the pushed commits. |
+| CI on commit `49a57d8` | Metadata and licence, submission link, build, Comparator: pass. **API documentation job: failed** with "not enough memory" on the runner while doc-gen4 was processing dependencies; it does not involve the proofs. See the Actions tab for later commits. |
 | Human review of the Lean statements | **None.** |
 | Human refereeing of the paper | **None.** |
 | Palomar Registry | **Not submitted, not registered.** |
 
-The logs of the commands that were run are in `docs/verification/`.
+The logs of the local commands are in `docs/verification/`; the CI logs are in
+the Actions tab.
 
 ### What the kernel check does and does not establish
 
@@ -92,9 +93,8 @@ ruby scripts/validate-formalization.rb
 ./scripts/verify-comparator.sh      # needs bubblewrap
 ```
 
-Before any submission, run all of these on a fresh checkout of the exact
-commit to be submitted, on a machine with `bubblewrap`, and confirm the three
-`CONFIRM` values in `formalization.yaml`. Submission goes through
+Before any submission, check that CI is green on the exact commit to be
+submitted, and confirm the three `CONFIRM` values in `formalization.yaml`. Submission goes through
 <https://submit.palomar-registry.org/> with the full 40-character commit SHA,
 by the responsible maintainer.
 
