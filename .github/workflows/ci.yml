@@ -101,6 +101,12 @@ jobs:
       - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
         with:
           build: false
+      - name: Allow memory overcommit for the doc build
+        # doc-gen4 documents every imported Mathlib module in one lake process;
+        # late in the build that process is too large for the runner to fork
+        # `git` from it ("resource exhausted, not enough memory") under the
+        # default overcommit heuristic. The runner is disposable.
+        run: sudo sysctl -w vm.overcommit_memory=1
       - name: Build doc-gen4 output
         working-directory: docbuild
         env:
