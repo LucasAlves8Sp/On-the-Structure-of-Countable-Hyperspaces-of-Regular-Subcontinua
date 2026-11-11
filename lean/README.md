@@ -11,8 +11,9 @@ The paper, its LaTeX source and the AI disclosure are at the root of
 The project is laid out as the [Palomar registry](https://palomar-registry.org/) requires:
 `Challenge.lean` states the results using only Mathlib, `Solution.lean` proves them, and
 `comparator.json` tells `lake comparator` how to compare them. The provenance and the other metadata
-are in `formalization.yaml`. The snapshot submitted to Palomar is commit `959fb91` of the branch
-`palomar`, which has this project at its root.
+are in `formalization.yaml`. It is registered in Palomar as
+[PALOMAR-2026-11-11-000007 v1](https://palomar-registry.org/entry?id=PALOMAR-2026-11-11-000007&version=1),
+from commit `959fb91` of the branch `palomar`, which has this project at its root.
 
 ## The theorem
 

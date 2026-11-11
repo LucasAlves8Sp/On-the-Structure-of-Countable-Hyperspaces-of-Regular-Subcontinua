@@ -17,6 +17,9 @@ identifiers:
   - type: url
     value: "https://aixiv.online/abs/2611.01165"
     description: "aiXiv preprint aiXiv:2611.01165"
+  - type: url
+    value: "https://palomar-registry.org/entry?id=PALOMAR-2026-11-11-000007&version=1"
+    description: "Palomar registry entry PALOMAR-2026-11-11-000007 v1 (Lean formalization)"
 version: v1
 date-released: 2026-11-11
 license: CC-BY-4.0

@@ -4,11 +4,11 @@
 [![aiXiv](https://img.shields.io/badge/aiXiv-2611.01165-4b5563.svg)](https://aixiv.online/abs/2611.01165)
 [![Hexagon](https://img.shields.io/badge/hexagon-2611.00342_(in_moderation)-9ca3af.svg)](https://hexagonmath.org/)
 [![Lean 4](https://img.shields.io/badge/Lean_4-all_theorems_formalized-2f6f4f.svg)](lean/)
-[![Palomar](https://img.shields.io/badge/Palomar-submitted-9ca3af.svg)](https://palomar-registry.org/)
+[![Palomar](https://img.shields.io/badge/Palomar-PALOMAR--2026--11--11--000007-1f4e79.svg)](https://palomar-registry.org/entry?id=PALOMAR-2026-11-11-000007&version=1)
 
 **Lucas Alves de Almeida** (independent researcher)
 
-**Main result.** If $X$ is a metric continuum whose hyperspace $\mathcal D(X)$ of regular subcontinua is countable, then $\mathcal D(X)$ is a $G_\delta$ subset of $C(X)$, hence completely metrizable and scattered, with dense isolated points. In particular **$\mathcal D(X)$ is never homeomorphic to the rationals**. This answers the rational case of a question of Ramírez Angarita (2023, Pregunta 3.2.14) and of Camargo, Ordoñez and Ramírez (Appl. Gen. Topol. 25 (2024), Question 3.26); the irrational case was answered in [the companion repository](https://github.com/LucasAlves8Sp/A-CONTINUUM-WHOSE-HYPERSPACE-OF-REGULAR-SUBCONTINUA-IS-HOMEOMORPHIC-TO-THE-IRRATIONALS). **Every theorem of the paper is formalized in Lean 4 with Mathlib**; the examples and remarks are not.
+**Main result.** If $X$ is a metric continuum whose hyperspace $\mathcal D(X)$ of regular subcontinua is countable, then $\mathcal D(X)$ is a $G_\delta$ subset of $C(X)$, hence completely metrizable and scattered, with dense isolated points. In particular **$\mathcal D(X)$ is never homeomorphic to the rationals**. This answers the rational case of a question of Ramírez Angarita (2023, Pregunta 3.2.14) and of Camargo, Ordoñez and Ramírez (Appl. Gen. Topol. 25 (2024), Question 3.26); the irrational case was answered in [the companion repository](https://github.com/LucasAlves8Sp/A-CONTINUUM-WHOSE-HYPERSPACE-OF-REGULAR-SUBCONTINUA-IS-HOMEOMORPHIC-TO-THE-IRRATIONALS). **Every theorem of the paper is formalized in Lean 4 with Mathlib**; the examples and remarks are not. The formalization is registered in the [Palomar registry](https://palomar-registry.org/) of Lean-verified mathematics as [PALOMAR-2026-11-11-000007](https://palomar-registry.org/entry?id=PALOMAR-2026-11-11-000007&version=1).
 
 | | |
 | --- | --- |
@@ -18,7 +18,7 @@
 | Hexagon preprint | hexagon:2611.00342, submitted 11 November 2026, awaiting moderation |
 | Lean formalization | [`lean/`](lean/), with the main theorem `RegularSubcontinua.no_continuum_with_regular_hyperspace_rat` |
 | Review and verification | [`REVIEW_AND_VERIFICATION.md`](REVIEW_AND_VERIFICATION.md) |
-| Palomar registry | submitted 11 November 2026 from commit [`959fb91`](https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/tree/959fb91b14b6eaf038f9042183ed2f021904e0ce) of the branch [`palomar`](https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/tree/palomar); mechanical verification passed; not yet registered |
+| Palomar registry | [PALOMAR-2026-11-11-000007 v1](https://palomar-registry.org/entry?id=PALOMAR-2026-11-11-000007&version=1), registered 11 November 2026 from commit [`959fb91`](https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/tree/959fb91b14b6eaf038f9042183ed2f021904e0ce) of the branch [`palomar`](https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/tree/palomar) |
 
 ## Abstract
 
@@ -84,7 +84,13 @@ Lemma 4.6 and Theorem 5.1 are standalone comparator targets.
 | `lake comparator --paranoid` (local, unsandboxed) | also accepted by the paranoid Lean kernel, lean4lean and con-leche |
 | negative control: one statement of `Solution.lean` deliberately weakened | rejected, as it should be |
 
-**Palomar.** The formalization was submitted to the [Palomar registry](https://palomar-registry.org/) of Lean-verified mathematics on 11 November 2026. Palomar requires the Lean project and a single licence file at the repository root, so the submitted snapshot is commit [`959fb91`](https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/tree/959fb91b14b6eaf038f9042183ed2f021904e0ce) of the branch [`palomar`](https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/tree/palomar). It holds the same Lean files as `lean/`, with Palomar's template CI. Palomar's sandboxed mechanical verification passed; the automated statement review and the registration are pending.
+**Palomar.** The formalization is registered in the [Palomar registry](https://palomar-registry.org/) of Lean-verified mathematics as **[PALOMAR-2026-11-11-000007 v1](https://palomar-registry.org/entry?id=PALOMAR-2026-11-11-000007&version=1)** (registered 11 November 2026). For the registration:
+
+- Palomar ran `lake comparator` in its sandbox. It checked that `Solution.lean` proves the 23 statements in `Challenge.lean`, which uses only Mathlib.
+- Lean's kernel and the independent kernels nanoda and con-ron all accepted the exported proof.
+- An automated review compared the formal statements with the informal account (docstrings, README and `formalization.yaml`) and judged the research interest. It found no problems. This is an AI review, not human peer review.
+
+Palomar requires the Lean project and a single licence file at the repository root, so the submitted snapshot is commit [`959fb91`](https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/tree/959fb91b14b6eaf038f9042183ed2f021904e0ce) of the branch [`palomar`](https://github.com/LucasAlves8Sp/On-the-Structure-of-Countable-Hyperspaces-of-Regular-Subcontinua/tree/palomar). It holds the same Lean files as `lean/`, with Palomar's template CI and an Apache-2.0 `LICENSE`.
 
 ## Building
 
@@ -103,6 +109,8 @@ lake env lean CheckAxioms.lean
 
 Lucas Alves de Almeida, *On the structure of countable hyperspaces of regular subcontinua*, preprint, Zenodo, 2026. [doi:10.5281/zenodo.24144776](https://doi.org/10.5281/zenodo.24144776). Also available as [aiXiv:2611.01165](https://aixiv.online/abs/2611.01165).
 
+To cite the registered Lean formalization: Lucas Alves de Almeida, *On the structure of countable hyperspaces of regular subcontinua*, Palomar, [PALOMAR-2026-11-11-000007 v1](https://palomar-registry.org/entry?id=PALOMAR-2026-11-11-000007&version=1), 2026.
+
 The concept DOI above always resolves to the latest version.
 
 | Version | Content | DOI |
@@ -119,8 +127,16 @@ The concept DOI above always resolves to the latest version.
   doi       = {10.5281/zenodo.24144776},
   url       = {https://doi.org/10.5281/zenodo.24144776}
 }
+
+@misc{palomar-2026-11-11-000007-v1,
+  author       = {{Lucas Alves de Almeida}},
+  title        = {{On the structure of countable hyperspaces of regular subcontinua}},
+  year         = {2026},
+  howpublished = {Palomar, PALOMAR-2026-11-11-000007 v1},
+  url          = {https://palomar-registry.org/entry?id=PALOMAR-2026-11-11-000007&version=1}
+}
 ```
 
 ## Status
 
-No independent expert has yet verified the proofs, and no human has yet compared the Lean statements with the paper. The Lean formalization proves every theorem of the paper against the definitions in `lean/Challenge.lean`; the examples and remarks are not formalized. The Palomar registration and the Hexagon moderation are pending.
+No independent expert has yet verified the proofs, and no human has yet compared the Lean statements with the paper. The Lean formalization proves every theorem of the paper against the definitions in `lean/Challenge.lean`; the examples and remarks are not formalized. It is registered in Palomar (PALOMAR-2026-11-11-000007), where the proof was mechanically verified and the statements passed an automated, non-human review. The Hexagon moderation is pending.

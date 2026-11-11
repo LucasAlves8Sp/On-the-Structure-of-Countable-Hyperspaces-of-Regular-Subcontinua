@@ -15,6 +15,7 @@ theorem RegularSubcontinua.no_continuum_with_regular_hyperspace_rat :
 * **Size.** About 2,800 lines of proofs in 9 files, plus `Challenge.lean` (293 lines) and `Solution.lean`.
 * **Not formalized.** Examples 7.1–7.3, the remarks, and Lemmas 2.3 and 2.4 as stated. So the theorems of the paper are formalized, not the whole paper.
 * **The formalization found no mathematical gap.** No statement had to be changed; one hypothesis turned out to be unnecessary (Proposition 4.3(2) holds without countability).
+* **Palomar.** Registered as [PALOMAR-2026-11-11-000007 v1](https://palomar-registry.org/entry?id=PALOMAR-2026-11-11-000007&version=1) on 11 November 2026, from commit `959fb91` (branch `palomar`). Palomar's sandboxed comparator run passed, and its automated review (an AI review, not human) found no problems with the statements, their presentation, provenance or research interest.
 * **Not yet done.** No human has refereed the paper, and no human has compared the Lean statements with the paper. The second task needs only `lean/Challenge.lean` and Section 2.
 
 **What one must trust:** the Lean kernel; Mathlib's definitions of the objects in the statements (`NonemptyCompacts` and its topology, `closure`, `interior`, `IsConnected`, `IsCompact`, `IsGδ`, `IsCompletelyMetrizableSpace`, `Homeomorph`, `ℚ`, cardinals); and the 13 short definitions at the top of `lean/Challenge.lean`, listed in Section 2.
